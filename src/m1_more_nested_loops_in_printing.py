@@ -3,7 +3,7 @@ This project demonstrates NESTED LOOPS (i.e., loops within loops)
 in the context of PRINTING on the CONSOLE.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
+         their colleagues and Sydney Larson.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
@@ -54,6 +54,12 @@ def triangle_right_justified(r):
     Precondition:  r is a non-negative integer.
     For purposes of "lining up", assume r is a single digit.
     """
+    for k in range(1,r+1):
+        for j in range(r-k):
+            print(' ',end="")
+        for i in range(1,k+1):
+            print(i,end="")
+        print()
     # ------------------------------------------------------------------
     # TODO: 2. Implement and test this function.
     #          Some tests are already written for you (above).
@@ -108,6 +114,12 @@ def triangle_upside_down(r):
     Precondition:  r is a non-negative integer.
     For purposes of "lining up", assume r is a single digit.
     """
+    for k in range(r+1,1,-1):
+        for i in range(k-1,0,-1):
+            print(i, end="")
+        for j in range(r-k):
+            print(' ',end="")
+        print()
     # ------------------------------------------------------------------
     # TODO: 3. Implement and test this function.
     #          Some tests are already written for you (above).
@@ -159,6 +171,15 @@ def vee(r):
     Precondition:  r is a non-negative integer.
     For purposes of "lining up", assume r is a single digit.
     """
+    for k in range(r,0,-1):
+        for j in range(r - k):
+            print(' ', end="")
+        for i in range(1, k + 1):
+            print(i, end="")
+        print('-',end='')
+        for h in range(k,0,-1):
+            print(h,end="")
+        print()
     # ------------------------------------------------------------------
     # TODO: 4. Implement and test this function.
     #          Some tests are already written for you (above).
@@ -215,6 +236,12 @@ def numbers_constant_forward(r, maxnum, n):
 
     Preconditions:  r, maxnum and n are positive integers.
     """
+    for k in range(r):
+        for j in range(1,maxnum+1):
+            for i in range(n):
+                print(j,end="")
+            print(' ',end="")
+        print()
     # ------------------------------------------------------------------
     # TODO: 5. Implement and test this function.
     #          Some tests are already written for you (above).
@@ -259,6 +286,12 @@ def numbers_constant_backwards(r, maxnum, n):
        777 666 555 444 333 222 111
     Preconditions:  r, maxnum and n are positive integers.
     """
+    for k in range(r):
+        for j in range(maxnum,0,-1):
+            for i in range(n):
+                print(j,end="")
+            print(' ',end="")
+        print()
     # ------------------------------------------------------------------
     # TODO: 6. Implement and test this function.
     #          Some tests are already written for you (above).
@@ -311,6 +344,12 @@ def numbers_increasing_forward(r, maxnum):
 
     Preconditions:  r and maxnum are positive integers.
     """
+    for k in range(r):
+        for j in range(1,maxnum+1):
+            for i in range(j):
+                print(j,end="")
+            print(' ',end="")
+        print()
     # ------------------------------------------------------------------
     # TODO: 7. Implement and test this function.
     #          Some tests are already written for you (above).
